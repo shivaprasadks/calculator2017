@@ -77,7 +77,7 @@ public class OptionsFragment extends Fragment implements OnClickListener {
                 try {
                     i1 = new Intent("android.intent.action.SEND");
                     i1.setType("text/plain");
-                    i1.putExtra("android.intent.extra.SUBJECT", "CT 500 by BrownDwarf");
+                    i1.putExtra("android.intent.extra.SUBJECT", "Citizen Calculator");
                     i1.putExtra("android.intent.extra.TEXT", BuildConfig.FLAVOR + shareString);
                     startActivity(Intent.createChooser(i1, "Choose one"));
                 } catch (Exception e) {
@@ -112,14 +112,14 @@ public class OptionsFragment extends Fragment implements OnClickListener {
                     i1 = new Intent("android.intent.action.SEND");
                     i1.setType("text/plain");
                     i1.putExtra("android.intent.extra.SUBJECT", "TapeCalc : Android");
-                    i1.putExtra("android.intent.extra.TEXT", ("\n Hey try out this awesome app\n\n" + "Video Link : https://goo.gl/zxcNnP  \n\n\n App Link: ") + shareString);
+                    i1.putExtra("android.intent.extra.TEXT", ("\n Hey try out this awesome app\n\n" + "Video Link : https://applink.com  \n\n\n App Link: ") + shareString);
                     startActivity(Intent.createChooser(i1, "Choose one"));
                 } catch (Exception e3) {
                 }
             case R.id.bEmailDev /*2131427483*/:
                 Intent i = new Intent("android.intent.action.SEND");
                 i.setType("plain/text");
-                i.putExtra("android.intent.extra.EMAIL", new String[]{"dwarf.brown@gmail.com"});
+                i.putExtra("android.intent.extra.EMAIL", new String[]{"myownmail@google.com"});
                 i.putExtra("android.intent.extra.SUBJECT", "Check Calc Customer");
                 i.putExtra("android.intent.extra.TEXT", BuildConfig.FLAVOR);
                 startActivity(Intent.createChooser(i, BuildConfig.FLAVOR));
@@ -128,10 +128,10 @@ public class OptionsFragment extends Fragment implements OnClickListener {
     }
 
     private void showToast(String str) {
-        Toast.makeText(getActivity(), str, 0).show();
+        Toast.makeText(getActivity(), str, Toast.LENGTH_SHORT).show();
     }
 
     private void showInfoDialog(String str) {
-        new Builder(new ContextThemeWrapper(getActivity(), 16973935)).setTitle("Help").setMessage(str).setNegativeButton(17039370, null).create().show();
+        new Builder(new ContextThemeWrapper(getActivity(), 16973935)).setTitle("Help").setMessage("Features of app").setNegativeButton(17039370, null).create().show();
     }
 }

@@ -28,11 +28,11 @@ public class ThemeManager {
     private void initArrayList() {
         AvailableThemesList = new ArrayList();
         AvailableThemesList.add(new ThemeNormalCiti());
-        AvailableThemesList.add(new TaxPlusTheme());
+       /* AvailableThemesList.add(new TaxPlusTheme());
         AvailableThemesList.add(new MaterialTheme());
         AvailableThemesList.add(new MaterialCyanDark());
         AvailableThemesList.add(new MaterialRed());
-        AvailableThemesList.add(new MaterialGreenDark());
+        AvailableThemesList.add(new MaterialGreenDark()); */
     }
 
     public ThemeType getCurrentTheme() {

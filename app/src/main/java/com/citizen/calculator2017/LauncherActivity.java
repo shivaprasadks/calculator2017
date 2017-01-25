@@ -59,7 +59,7 @@ public class LauncherActivity extends FragmentActivity implements IappConstants,
             mtoast.cancel();
         }
         Toast toast = mtoast;
-        Toast.makeText(activity, string, 0).show();
+        Toast.makeText(activity, string, Toast.LENGTH_SHORT).show();
     }
 
     protected void onPause() {
