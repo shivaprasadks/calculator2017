@@ -1,6 +1,8 @@
 package com.citizen.calculator2017.calclib;
 
 
+import com.citizen.calculator2017.BuildConfig;
+
 public abstract class OperationType {
     abstract double getValue(double d, double d2);
 

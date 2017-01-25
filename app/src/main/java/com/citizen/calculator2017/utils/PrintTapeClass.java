@@ -1,12 +1,16 @@
 package com.citizen.calculator2017.utils;
 
 import android.support.v4.widget.DrawerLayout;
-import com.browndwarf.calclib.HistoryElements;
-import com.browndwarf.calclib.IappConstants;
-import com.browndwarf.calclib.calculatorFactory;
-import com.browndwarf.checkcalculator.BuildConfig;
+import com.citizen.calculator2017.calclib.HistoryElements;
+import com.citizen.calculator2017.calclib.IappConstants;
+import com.citizen.calculator2017.calclib.calculatorFactory;
+import com.citizen.calculator2017.BuildConfig;
+
+import android.widget.SpinnerAdapter;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import static android.widget.Spinner.MODE_DROPDOWN;
 
 public class PrintTapeClass implements IappConstants {
     private static ArrayList<HistoryElements> hist;
@@ -46,7 +50,7 @@ public class PrintTapeClass implements IappConstants {
     private static String getPercentageString(int percentMode, double val) {
         String valstr = NumberFormatter.formatDecStr(val, getInadianFormat());
         switch (percentMode) {
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 return "% [" + valstr + "]";
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return "% [Tax =" + valstr + "]";

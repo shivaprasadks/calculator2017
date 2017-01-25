@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
-import com.browndwarf.checkcalculator.utils.PersistencyManager;
+import com.citizen.calculator2017.utils.PersistencyManager;
 
 public class ThemeNavigator extends FragmentActivity implements OnClickListener {
     static Toast mtoast;
@@ -21,11 +21,11 @@ public class ThemeNavigator extends FragmentActivity implements OnClickListener 
 
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
-        setContentView(C0129R.layout.theme_navigator);
-        this.mPager = (ViewPager) findViewById(C0129R.id.themepager);
+        setContentView(R.layout.theme_navigator);
+        this.mPager = (ViewPager) findViewById(R.id.themepager);
         this.mAdapter = new ThemePageAdapter(getSupportFragmentManager());
         this.mPager.setAdapter(this.mAdapter);
-        this.bselect = (Button) findViewById(C0129R.id.bSelectTheme);
+        this.bselect = (Button) findViewById(R.id.bSelectTheme);
         this.bselect.setOnClickListener(this);
     }
 
@@ -42,7 +42,7 @@ public class ThemeNavigator extends FragmentActivity implements OnClickListener 
     }
 
     public void onClick(View v) {
-        if (v.getId() == C0129R.id.bSelectTheme) {
+        if (v.getId() == R.id.bSelectTheme) {
             ThemeManager.getThemeManager().setThemeFromIndex(this.mPager.getCurrentItem());
             PersistencyManager.setTheme(ThemeManager.getThemeManager().getCurrentTheme());
             finish();

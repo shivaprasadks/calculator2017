@@ -16,6 +16,8 @@ public class LauncherPageAdapter extends FragmentStatePagerAdapter implements Ia
     int curSkinIndex;
     Fragment main;
     Fragment taxPlus;
+    public static final int MODE_DIALOG = 0;
+    public static final int MODE_DROPDOWN = 1;
 
     public LauncherPageAdapter(FragmentManager fm) {
         super(fm);
@@ -24,9 +26,9 @@ public class LauncherPageAdapter extends FragmentStatePagerAdapter implements Ia
 
     public Fragment getItem(int pos) {
         switch (pos) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case MODE_DIALOG /*0*/:
                 return new OptionsFragment();
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 return ThemeManager.getThemeManager().getCurrentTheme().getFragment();
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return new ListViewFullScreen();
@@ -45,9 +47,9 @@ public class LauncherPageAdapter extends FragmentStatePagerAdapter implements Ia
 
     public CharSequence getPageTitle(int pos) {
         switch (pos) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case MODE_DIALOG /*0*/:
                 return "<<";
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 return BuildConfig.FLAVOR;
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return ">>";

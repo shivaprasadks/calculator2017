@@ -5,10 +5,14 @@ import android.support.v4.media.TransportMediator;
 import android.support.v4.widget.DrawerLayout;
 import java.util.ArrayList;
 
+import com.citizen.calculator2017.BuildConfig;
 import com.citizen.calculator2017.R;
 import com.citizen.calculator2017.utils.ListElement;
 import com.citizen.calculator2017.utils.PrintTapeClass;
 import com.citizen.calculator2017.utils.ProductOut;
+
+import static android.widget.Spinner.MODE_DIALOG;
+import static com.citizen.calculator2017.Adapters.LauncherPageAdapter.MODE_DROPDOWN;
 
 public class CorrectHandler implements IappConstants, IsystemStates {
     private ListElement Listobject;
@@ -197,20 +201,20 @@ public class CorrectHandler implements IappConstants, IsystemStates {
     }
 
     void handleOperation(String op) {
-        Object obj = -1;
+        int obj = -1;
         switch (op.hashCode()) {
-            case R.styleable.Theme_actionButtonStyle /*43*/:
+         /*   case R.styleable.Theme_actionButtonStyle :
                 if (op.equals("+")) {
-                    obj = null;
+                    obj = 0;
                     break;
                 }
                 break;
-            case R.styleable.Theme_buttonBarButtonStyle /*45*/:
+            case R.styleable.Theme_buttonBarButtonStyle :
                 if (op.equals("-")) {
                     obj = 1;
                     break;
                 }
-                break;
+                break; */
             case 120:
                 if (op.equals("x")) {
                     obj = 2;
@@ -230,20 +234,20 @@ public class CorrectHandler implements IappConstants, IsystemStates {
                 }
                 break;
         }
-        switch (obj) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+       switch (obj) {
+            case  MODE_DIALOG :
                 this.mCurrentInputType = this.mAdd;
                 return;
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case  MODE_DROPDOWN :
                 this.mCurrentInputType = this.mSub;
                 return;
-            case DrawerLayout.STATE_SETTLING /*2*/:
+            case DrawerLayout.STATE_SETTLING :
                 this.mCurrentInputType = this.mMul;
                 return;
-            case WearableExtender.SIZE_MEDIUM /*3*/:
+            case WearableExtender.SIZE_MEDIUM :
                 this.mCurrentInputType = this.mDiv;
                 return;
-            case TransportMediator.FLAG_KEY_MEDIA_PLAY /*4*/:
+            case TransportMediator.FLAG_KEY_MEDIA_PLAY :
                 this.mCurrentInputType = this.mMarkup;
                 break;
         }

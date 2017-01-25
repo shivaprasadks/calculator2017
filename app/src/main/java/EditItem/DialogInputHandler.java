@@ -6,15 +6,17 @@ import android.support.v4.widget.DrawerLayout;
 
 import com.citizen.calculator2017.BuildConfig;
 import com.citizen.calculator2017.calclib.Addition;
-import  com.citizen.calculator2017.calclib.Division;
-import  com.citizen.calculator2017.calclib.HistoryElements;
-import  com.citizen.calculator2017.calclib.InputType;
-import  com.citizen.calculator2017.calclib.Multiplication;
-import  com.citizen.calculator2017.calclib.OperationType;
-import  com.citizen.calculator2017.calclib.Subtraction;
-import  com.citizen.calculator2017.utils.PersistencyManager;
-import  com.citizen.calculator2017.utils.UIappConstants;
-import  com.citizen.calculator2017.utils.NumberFormatter;
+import com.citizen.calculator2017.calclib.Division;
+import com.citizen.calculator2017.calclib.HistoryElements;
+import com.citizen.calculator2017.calclib.InputType;
+import com.citizen.calculator2017.calclib.Multiplication;
+import com.citizen.calculator2017.calclib.OperationType;
+import com.citizen.calculator2017.calclib.Subtraction;
+import com.citizen.calculator2017.utils.NumberFormatter;
+import com.citizen.calculator2017.utils.PersistencyManager;
+import com.citizen.calculator2017.utils.UIappConstants;
+
+import static android.widget.Spinner.MODE_DROPDOWN;
 
 public class DialogInputHandler implements UIappConstants {
     private HistoryElements hitem;
@@ -92,7 +94,7 @@ public class DialogInputHandler implements UIappConstants {
     public void handleOperation(int op) {
         OperationType mCurrentInputType;
         switch (op) {
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 mCurrentInputType = new Addition();
                 break;
             case DrawerLayout.STATE_SETTLING /*2*/:

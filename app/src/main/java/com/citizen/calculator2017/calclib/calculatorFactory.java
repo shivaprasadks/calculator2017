@@ -3,11 +3,17 @@ package com.citizen.calculator2017.calclib;
 import android.support.v4.app.NotificationCompat.WearableExtender;
 import android.support.v4.media.TransportMediator;
 import android.support.v4.widget.DrawerLayout;
+
+import com.citizen.calculator2017.BuildConfig;
 import com.citizen.calculator2017.utils.UIappConstants;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import com.citizen.calculator2017.utils.ParametersFromHistory;
 import com.citizen.calculator2017.utils.ProductOut;
+
+
+import static android.widget.Spinner.MODE_DIALOG;
+import static android.widget.Spinner.MODE_DROPDOWN;
 
 public class calculatorFactory implements IappConstants, IsystemStates {
     private static int formatType;
@@ -147,8 +153,8 @@ public class calculatorFactory implements IappConstants, IsystemStates {
 
     public void setIndianFormat(int type) {
         switch (type) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DIALOG /*0*/:
+            case MODE_DROPDOWN /*1*/:
             case DrawerLayout.STATE_SETTLING /*2*/:
                 formatType = type;
             default:
@@ -260,9 +266,9 @@ public class calculatorFactory implements IappConstants, IsystemStates {
 
     private String getFormatString(double d, int indianFormat) {
         switch (indianFormat) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case MODE_DIALOG /*0*/:
                 return getFormatString(d);
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 return getInternationalFormatString(d);
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return getInternationalFormatString(d);
@@ -273,9 +279,9 @@ public class calculatorFactory implements IappConstants, IsystemStates {
 
     private String getTapeCalcFormatString(double d) {
         switch (getDoubleStringNoFormat(d).indexOf(".")) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case MODE_DIALOG /*0*/:
                 return ".##";
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 return "#.##";
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return "##.##";
@@ -285,8 +291,8 @@ public class calculatorFactory implements IappConstants, IsystemStates {
                 return "#,###.##";
             case WearableExtender.SIZE_FULL_SCREEN /*5*/:
                 return "##,###.##";
-            case FragmentManagerImpl.ANIM_STYLE_FADE_EXIT /*6*/:
-                return "###,###.##";
+       //     case ANIM_STYLE_FADE_EXIT /*6*/:
+        //        return "###,###.##";
             case UIappConstants.NO_OPERATION /*7*/:
                 return "###,###.##";
             case TransportMediator.FLAG_KEY_MEDIA_PLAY_PAUSE /*8*/:
@@ -300,9 +306,9 @@ public class calculatorFactory implements IappConstants, IsystemStates {
 
     private String getInternationalFormatString(double d) {
         switch (getDoubleStringNoFormat(d).indexOf(".")) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case  MODE_DIALOG /*0*/:
                 return ".##########";
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case  MODE_DROPDOWN /*1*/:
                 return "#.#########";
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return "##.########";
@@ -312,8 +318,8 @@ public class calculatorFactory implements IappConstants, IsystemStates {
                 return "#,###.######";
             case WearableExtender.SIZE_FULL_SCREEN /*5*/:
                 return "##,###.#####";
-            case FragmentManagerImpl.ANIM_STYLE_FADE_EXIT /*6*/:
-                return "###,###.####";
+       //    case ANIM_STYLE_FADE_EXIT /*6*/:
+        //        return "###,###.####";*/
             case UIappConstants.NO_OPERATION /*7*/:
                 return "###,###.###";
             case TransportMediator.FLAG_KEY_MEDIA_PLAY_PAUSE /*8*/:
@@ -327,9 +333,9 @@ public class calculatorFactory implements IappConstants, IsystemStates {
 
     private String getFormatString(double d) {
         switch (getDoubleStringNoFormat(d).indexOf(".")) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case  MODE_DIALOG /*0*/:
                 return ".##########";
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case  MODE_DROPDOWN /*1*/:
                 return "#.#########";
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return "##.########";
@@ -339,8 +345,8 @@ public class calculatorFactory implements IappConstants, IsystemStates {
                 return "#,###.######";
             case WearableExtender.SIZE_FULL_SCREEN /*5*/:
                 return "##,###.#####";
-            case FragmentManagerImpl.ANIM_STYLE_FADE_EXIT /*6*/:
-                return "#,##,###.####";
+       //   case ANIM_STYLE_FADE_EXIT /*6*/:
+        //        return "#,##,###.####";*/
             case UIappConstants.NO_OPERATION /*7*/:
                 return "##,##,###.###";
             case TransportMediator.FLAG_KEY_MEDIA_PLAY_PAUSE /*8*/:
@@ -681,7 +687,7 @@ public class calculatorFactory implements IappConstants, IsystemStates {
 
     private OperationType getOperationType(int op) {
         switch (op) {
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case MODE_DROPDOWN /*1*/:
                 return this.mAdd;
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return this.mSub;

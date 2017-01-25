@@ -198,7 +198,7 @@ public class EditItemDialogUI implements IeditItemConstants, OnClickListener, Ia
             this.hitem.prevOperation = this.mDialogInputHandler.getOperationString();
             this.factory.refreshFromHistory();
             new CorrectHandler().evalulateHistory();
-            this.frag.refreshList();
+         //   this.frag.refreshList();
         } else {
             this.factory.setTaxRate(this.mDialogInputHandler.getOperand());
             PersistencyManager.setTaxRate(this.mDialogInputHandler.getOperand());

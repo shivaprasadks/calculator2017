@@ -1,6 +1,7 @@
 package com.citizen.calculator2017.calclib;
 
 
+import com.citizen.calculator2017.BuildConfig;
 
 public class HistoryElements implements IappConstants {
     public String comment;

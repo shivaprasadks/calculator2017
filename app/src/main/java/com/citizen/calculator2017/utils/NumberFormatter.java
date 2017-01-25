@@ -8,12 +8,15 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import static android.widget.Spinner.MODE_DIALOG;
+import static android.widget.Spinner.MODE_DROPDOWN;
+
 public class NumberFormatter implements IappConstants {
     private static String getPatternString(int type) {
         switch (type) {
-            case SpinnerCompat.MODE_DIALOG /*0*/:
+            case  MODE_DIALOG /*0*/:
                 return "#,##,###.######";
-            case SpinnerCompat.MODE_DROPDOWN /*1*/:
+            case  MODE_DROPDOWN /*1*/:
                 return "###,###.######";
             case DrawerLayout.STATE_SETTLING /*2*/:
                 return "###,###.00";

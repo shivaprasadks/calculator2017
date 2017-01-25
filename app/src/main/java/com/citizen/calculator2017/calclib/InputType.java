@@ -1,6 +1,7 @@
 package com.citizen.calculator2017.calclib;
 
 
+import com.citizen.calculator2017.BuildConfig;
 import com.citizen.calculator2017.utils.NumberFormatter;
 
 public class InputType implements IappConstants {

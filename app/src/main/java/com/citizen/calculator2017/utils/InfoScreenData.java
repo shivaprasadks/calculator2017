@@ -1,6 +1,7 @@
 package com.citizen.calculator2017.utils;
 
-import com.browndwarf.checkcalculator.BuildConfig;
+
+import com.citizen.calculator2017.BuildConfig;
 
 public class InfoScreenData {
     String[] array;

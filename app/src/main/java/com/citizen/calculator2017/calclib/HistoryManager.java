@@ -1,5 +1,6 @@
 package com.citizen.calculator2017.calclib;
 
+import com.citizen.calculator2017.BuildConfig;
 import com.citizen.calculator2017.calclib.HofH.HofHManager;
 import java.util.ArrayList;
 import com.citizen.calculator2017.utils.NumberFormatter;
