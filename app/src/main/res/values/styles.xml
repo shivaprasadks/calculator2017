@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat" />
+    <style name="button_black_big" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black_slector</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="button_black_big_taxplus" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">4.0</item>
+    </style>
+    <style name="button_black_plus" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black_slector</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:layout_marginBottom">2.0dip</item>
+        <item name="android:layout_weight">2.0</item>
+    </style>
+    <style name="button_black_plus_taxplus" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:layout_marginBottom">4.0dip</item>
+        <item name="android:layout_weight">8.0</item>
+    </style>
+    <style name="button_black_small" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black_slector</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="button_black_small_horizontal" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginTop">4.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:layout_marginBottom">2.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="button_black_small_taxplus" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">3.0</item>
+    </style>
+    <style name="button_black_vertical" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_black_slector</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:layout_marginBottom">2.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="button_green_small" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_green</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="button_green_small_taxplus" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_green</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">3.0</item>
+    </style>
+    <style name="button_pink" parent="@style/AppBaseTheme">
+        <item name="android:background">@drawable/button_pink</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:layout_weight">4.0</item>
+    </style>
+</resources>

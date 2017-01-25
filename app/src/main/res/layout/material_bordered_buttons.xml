@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/materialLayoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tvDisplayLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="2.0dip"
+        android:layout_weight="2.0"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="3.0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvStep"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvMemory"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/tvTax"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3.0"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="3.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvAnswer"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="9.0"
+                    android:gravity="right|center"
+                    android:text="DEC" />
+
+                <TextView
+                    android:id="@+id/tvOperation"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.0"
+                    android:gravity="right|center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="6.0"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="4.0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/operatorsRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:background="#ff0000ff"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fbuttontaxplus"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="Tax+" />
+
+                <Button
+                    android:id="@+id/fbuttontaxminus"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="Tax-" />
+
+                <Button
+                    android:id="@+id/fbuttonpercentage"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/operatorsRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:background="#ff0000ff"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fbuttonmemplus"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="M+" />
+
+                <Button
+                    android:id="@+id/fbuttonmemminus"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="M-" />
+
+                <Button
+                    android:id="@+id/fbuttonmemrecall"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="MRC" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numPadRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fbutton7"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/fbutton8"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/fbutton9"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numPadRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fbutton4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/fbutton5"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/fbutton6"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numPadRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fbutton1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/fbutton2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/fbutton3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numPadRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fbutton0"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/fbuttonDecimal"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="•" />
+
+                <Button
+                    android:id="@+id/fbuttonEquals"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="=" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/operatorsMaterial"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="#ff0000ff"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/fbuttonClear"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:longClickable="true"
+                android:text="AC" />
+
+            <Button
+                android:id="@+id/fbuttonMultiply"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/fbuttonDivide"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/fbuttonMinus"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/fbuttonPlus"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="2.0"
+                android:text="+" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

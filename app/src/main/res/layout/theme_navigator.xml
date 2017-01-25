@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#ff252525"
+    android:orientation="vertical"
+    android:padding="4.0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="#ff000000"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvThemeTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff252525"
+            android:gravity="center"
+            android:text="Choose Calculator"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#ff19bf8d" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/themepager"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0px"
+        android:layout_weight="8.0">
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/theme_pager_title_strip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#ff252525"
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip"
+            android:textColor="#ffffffff" />
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="#ff000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bSelectTheme"
+            style="@style/button_black_big"
+            android:textColor="#ffffff"
+            android:text="OK" />
+    </LinearLayout>
+</LinearLayout>
