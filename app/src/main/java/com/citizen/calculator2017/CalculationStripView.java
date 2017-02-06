@@ -68,7 +68,7 @@ public class CalculationStripView extends FragmentActivity implements OnClickLis
     }
 
     private void showToast(String str) {
-        Toast.makeText(this, str, 0).show();
+        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(View v) {

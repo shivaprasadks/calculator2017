@@ -26,19 +26,19 @@ public class LauncherPageAdapter extends FragmentStatePagerAdapter implements Ia
 
     public Fragment getItem(int pos) {
         switch (pos) {
-            case MODE_DIALOG /*0*/:
-                return new OptionsFragment();
-            case MODE_DROPDOWN /*1*/:
+       /*   case MODE_DIALOG :
+                return new OptionsFragment(); */
+            case MODE_DROPDOWN :
                 return ThemeManager.getThemeManager().getCurrentTheme().getFragment();
-            case DrawerLayout.STATE_SETTLING /*2*/:
-                return new ListViewFullScreen();
+          /*  case DrawerLayout.STATE_SETTLING:
+                return new ListViewFullScreen(); */
             default:
                 return new MainActivity();
         }
     }
 
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     public int getItemPosition(Object object) {

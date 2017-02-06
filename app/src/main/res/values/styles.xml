@@ -97,4 +97,9 @@
         <item name="android:layout_margin">2.0dip</item>
         <item name="android:layout_weight">4.0</item>
     </style>
+
+    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>

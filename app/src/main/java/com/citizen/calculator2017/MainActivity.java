@@ -40,11 +40,12 @@ public class MainActivity extends Fragment implements OnClickListener, UIsystemS
     Typeface robotoBold;
     Typeface robotoFont;
     Typeface robotoRegular;
+    Typeface outline;
     int systemState;
     int themeB;
     int themeG;
     int themeR;
-    TextView tvAnswer;
+    TextView tvAnswer, ct512;
     TextView tvOperation;
     TextView tvStep;
     TextView tvcheck;
@@ -90,8 +91,10 @@ public class MainActivity extends Fragment implements OnClickListener, UIsystemS
         this.tvcheck = (TextView) v.findViewById(R.id.tvCheck);
         this.tvcorrect = (TextView) v.findViewById(R.id.tvCorrect);
         this.tvmemory = (TextView) v.findViewById(R.id.tvMemory);
+        this.ct512 = (TextView) v.findViewById(R.id.ct512);
         setOnClickListenersForAllButtons();
         Typeface typeface = this.robotoFont;
+
         this.robotoFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/robotothin.ttf");
         typeface = sevenfont;
         sevenfont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Digital7commaDot.ttf");
@@ -101,7 +104,11 @@ public class MainActivity extends Fragment implements OnClickListener, UIsystemS
         this.robotoRegular = Typeface.createFromAsset(getActivity().getAssets(), "fonts/robotoregular.ttf");
         typeface = this.robotoBold;
         this.robotoBold = Typeface.createFromAsset(getActivity().getAssets(), "fonts/robotobold.ttf");
-        setFontToAllElements(this.robotoFont);
+      setFontToAllElements(this.robotoFont);
+
+        this.outline = Typeface.createFromAsset(getActivity().getAssets(),"fonts/outline.ttf");
+        ct512.setTypeface(outline);
+
         setThemeColor(this.themeR, this.themeG, this.themeB);
         setfontSizeToAllButtons(20);
         setFontSizeToAllTextViews(25);
@@ -236,7 +243,7 @@ public class MainActivity extends Fragment implements OnClickListener, UIsystemS
             mtoast.cancel();
         }
         Toast toast = mtoast;
-        Toast.makeText(c, str, 0).show();
+        Toast.makeText(c, str, Toast.LENGTH_SHORT).show();
     }
 
     public void setUserVisibleHint(boolean isVisibleToUser) {
@@ -355,7 +362,7 @@ public class MainActivity extends Fragment implements OnClickListener, UIsystemS
 
     private void setThemeColor(int r, int g, int b) {
         int textViewColor = Color.argb(MotionEventCompat.ACTION_MASK, MotionEventCompat.ACTION_MASK, MotionEventCompat.ACTION_MASK, MotionEventCompat.ACTION_MASK);
-        setBgColorToTextViews(Color.rgb(182, 185, 114));
+        setBgColorToTextViews(Color.rgb(130,162,124));
     }
 
     private void setBgColorToTextViews(int themeColor) {
